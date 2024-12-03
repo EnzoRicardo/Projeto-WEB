@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parkinsans:wght@300..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding-top: 100px;
+    min-height: 100vh;
+    background: url(../HTML/Images/Fundo.png);
+    background-size: auto;
+    background-repeat: repeat;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 100px; 
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    color: white;
+    font-size: 1.7em;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.logo:hover{
+    color: #38b6ff;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.navbar i {
+    font-size: 28px;
+}
+
+.navbar a:hover {
+    transform: scale(1.05);
+    color: #38b6ff; 
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #38b6ff;
+    transition: 0.3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block; 
+    background-color: #38b6ff; 
+    color: rgb(0, 0, 0); 
+    padding: 15px 32px; 
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight: 700;
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.5s; 
+}
+
+.btn:hover {
+    background-color: #3095d0;
+    transform: scale(1.05);
+    box-shadow: 0 2px 30px #38b6ff;
+    color: white;
+    transition: 0.5s;
+}
+
+.shopping-bag {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+}
+
+#cart-count {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background-color: #38b6ff;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 60%;
+    font-weight: bold;
+    display: none; 
+    transition: 0.5s;
+}
+
+.card-container-refri {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+    justify-content: flex-start;
+    margin-right: 815px;
+}
+
+.card-container-sucos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+    justify-content: flex-start;
+    margin-right: 815px;
+}
+
+.card-container-energeticos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+    justify-content: flex-start;
+    margin-right: 815px;
+}
+
+.card-container-vodkas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+    justify-content: flex-start;
+    margin-right: 815px;
+}
+
+.card-container-whiskys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+    justify-content: flex-start;
+    margin-right: 815px;
+}
+
+.card-container-cervejas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+    justify-content: flex-start;
+    margin-right: 815px;
+}
+
+.cerveja {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 300px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cerveja:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+}
+
+.whisky {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 300px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whisky:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+}
+
+.vodka {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 300px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vodka:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+}
+
+.energeticos{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 300px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.energeticos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+}
+
+.suco {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 300px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.suco:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+}
+
+.refri {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 300px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.refri:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+}
+
+.card-description{
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-price {
+    font-size: 1.2em;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000;
+    padding: 15px 100px;
+    margin-left: 23px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.card-btn:hover {
+    background-color: #2d94cf;
+    color: white;
+    transform: scale(1.03);
+    box-shadow: 0 2px 30px #38b6ff;
+    transition: 0.5s;
+}
+
+.titles .soda {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    margin-left: 50px;
+    margin-top: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.info-box {
+    background-color: black;
+    color: white;
+    width: 380px;
+    height: 100%;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.CEP {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.CEP input {
+    color: #000000;
+    background-color: #ffffff;
+    width: 60%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid #38b6ff;
+    font-size: 15px;
+    margin-top: 15px;
+    outline: none;
+    text-align: center;
+}
+
+.CEP input:focus {
+    border-color: #38b6ff; 
+    box-shadow: 0 0 5px #2d94cf; 
+}
+
+.calculoCEP {
+    padding: 10px 20px; 
+    background-color: #38b6ff; 
+    color: black; 
+    border: none;
+    border-radius: 20px; 
+    font-weight: 500;
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-top: 10px;
+    width: 40%;
+}
+
+.calculoCEP:hover {
+    background-color: #2d94cf;
+    transform: scale(1.05);
+    box-shadow: 0 2px 30px #38b6ff;
+    color: white;
+    transition: 0.5s;
+}
